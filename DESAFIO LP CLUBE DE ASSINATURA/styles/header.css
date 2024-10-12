@@ -1,0 +1,61 @@
+header{
+    height: 59.25rem;
+
+    & .img-background{
+        position: absolute;
+        
+    }
+
+    & .header{
+        position: relative;
+
+        width: 70rem;
+        height: 3.625rem;
+        margin-top: 3.5rem;
+
+        justify-content: space-between;
+        align-items: center;
+
+        & img{
+            width: 14.375rem;
+            height: 3.625rem;
+        }
+
+        & .btn{
+            position: relative;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            overflow: hidden; 
+
+            font: var(--body-sm);
+            color: var(--text-title);
+            background-color: var(--pink-dark);
+
+            padding: 0.75rem 1.25rem;
+
+            z-index: 1; 
+            transition: color 0.5s ease; 
+        }
+
+        & .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background-color: var(--pink-base);
+            border-radius: 50%;
+            transition: width 0.6s ease, height 0.6s ease, opacity 0.6s ease;
+            transform: translate(-50%, -50%);
+            z-index: -1; 
+            opacity: 0.6;
+        }
+    
+        .btn:hover::before {
+            width: 200%;
+            height: 400%;
+            opacity: 1;
+        }
+    }
+}

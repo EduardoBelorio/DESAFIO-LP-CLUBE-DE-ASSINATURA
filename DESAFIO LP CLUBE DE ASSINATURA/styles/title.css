@@ -1,0 +1,18 @@
+.title{
+    position: absolute;
+    margin-top: 17.375rem;
+
+    h1{
+        width: 41rem;
+        text-align: center;
+        margin-inline: 24.5rem;
+    }
+
+    p{
+        text-align: center;
+        width: 35.5rem;
+        margin-inline: 27.25rem;
+
+        margin-top: 2rem;
+    }
+}

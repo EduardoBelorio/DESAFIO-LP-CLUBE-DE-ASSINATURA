@@ -1,0 +1,296 @@
+.pricing{
+    height: 77.125rem;
+    & .img-background{
+        position: absolute;
+    }
+
+    & .header-signature{
+        position: inherit;
+        padding-bottom: 3.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .cards {
+        margin-top: 5.125rem;
+    }
+
+    h3{
+        text-align: start;
+        font: var(--text-xs);
+        color: var(--blue-light);
+        margin-bottom: 1.5rem;
+    }
+
+    & .price{
+        margin-block: 2rem 4.375rem;
+
+    }
+
+    signature{
+        display: block;
+        text-align: start;
+        font: var(--text-md);
+        color: var(--text-title);
+
+        padding-bottom: 0.5rem;
+
+        small{
+            font: var(--text-xs);
+            color: var(--text-title);
+        }
+    }
+
+    pricing{
+        display: block;
+        text-align: start;
+        font: var(--body-sm);
+        color: var(--text-label);
+    }
+
+    li{
+        position: relative;
+        text-align: start;
+        padding-left: 1.5rem;
+        font: var(--body-pricing);
+        color: var(--text-body);
+
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    li::before{
+        content: '';
+        position: absolute;
+        left: 0; /* Posiciona o ícone à esquerda do texto */
+        top: 50%;
+        transform: translateY(-50%); /* Centraliza verticalmente */
+        width: 1rem; /* Ajuste o tamanho conforme necessário */
+        height: 1rem;
+        -webkit-mask: url('/assets/images/star-pricing.svg') no-repeat center;
+        mask: url('/assets/images/star-pricing.svg') no-repeat center;
+        background-color: var(--blue-base); /* Cor desejada para o ícone */
+    }
+
+    & .card{
+        transition: transform 0.7s ease;
+    }
+
+    img{
+        transition: transform 0.7s ease;
+    }
+
+    & .monthly{
+        position: relative;
+        z-index: 0;
+
+        margin-top: 4.0625rem;
+
+        transform: rotate(-8deg);
+        & .star{
+            color: var(--pink-base);
+            object-fit: cover;
+            transform: rotate(3deg);
+
+            transition: rotate 0.7s ease;
+
+            & img:nth-child(2){
+                position: absolute;
+                width: 1.625rem;
+                height: 1.625rem;
+                margin-right: 19.375rem;
+                margin-top: -1.6875rem;
+            }
+
+            & img:nth-child(1){
+                position: absolute;
+                width: 0.85rem;
+                height: 0.85rem;
+                margin-top: 0.75rem;
+                margin-right: 20.9375rem;
+            }
+        }
+
+        & .btn{
+            position: relative;
+            margin-top: 1.5rem;
+
+            overflow: hidden; /* Esconde o pseudo-elemento que sai dos limites do botão */
+
+            z-index: 1; /* Mantém o conteúdo do botão acima do pseudo-elemento */
+            transition: color 0.7s ease; /* Transição de cor do texto se necessário */
+        }
+
+        & .price{
+            margin-bottom: 5rem;
+        }
+    }
+
+    & .semi-annual{
+        position: relative;
+        z-index: 1;
+
+        & .bunny{
+            position: absolute;
+            object-fit: cover;
+            margin-top: -3.125rem;
+            margin-left: 2rem;
+        }
+
+        tag{
+            position: absolute;
+            font: var(--text-tag);
+            color: var(--text-body);
+            background-color: var(--shape-stroke);
+
+            border-radius: 62.4375rem;
+            padding: 0.5625rem 1.25rem;
+
+            margin-top: -3.125rem;
+        }
+
+        & li::before {
+            content: '';
+            position: absolute;
+            left: 0; /* Posiciona o ícone à esquerda do texto */
+            top: 50%;
+            transform: translateY(-50%); /* Centraliza verticalmente */
+            width: 1rem; /* Ajuste o tamanho conforme necessário */
+            height: 1rem;
+            -webkit-mask: url('/assets/images/star-pricing.svg') no-repeat center;
+            mask: url('/assets/images/star-pricing.svg') no-repeat center;
+            background-color: var(--pink-base); /* Cor desejada para o ícone */
+        }
+
+        & .btn{
+            position: relative;
+            margin: 0;
+
+            overflow: hidden; /* Esconde o pseudo-elemento que sai dos limites do botão */
+
+            z-index: 1; /* Mantém o conteúdo do botão acima do pseudo-elemento */
+            transition: color 0.7s ease; /* Transição de cor do texto se necessário */
+        }
+    }
+
+    & .annual{
+        position: relative;
+        z-index: 0;
+
+        transform: rotate(8deg);
+        margin-top: 4.0625rem;
+
+        & .star{
+            color: var(--pink-base);
+            object-fit: cover;
+            transform: rotate(3deg);           
+
+            & img:nth-child(2){
+                position: absolute;
+                width: 1.4512rem;
+                height: 1.4512rem;
+                margin-right: -20.625rem;
+                margin-top: -0.3125rem;
+            }
+
+            & img:nth-child(1){
+                position: absolute;
+                width: 0.7031rem;
+                height: 0.7031rem;
+                margin-top: 1.25rem;
+                margin-right: -16.5625rem;
+            }
+        }
+
+        & .btn{
+            position: relative;
+            margin:0;
+
+            overflow: hidden; /* Esconde o pseudo-elemento que sai dos limites do botão */
+
+            z-index: 1; /* Mantém o conteúdo do botão acima do pseudo-elemento */
+            transition: color 0.5s ease; /* Transição de cor do texto se necessário */
+        }
+    }
+
+    & .btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background-color: var(--blue-base);
+        border-radius: 50%;
+        transition: width 0.8s ease, height 0.4s ease, opacity 0.6s ease;
+        transform: translate(-50%, -50%);
+        z-index: -1; /* Garante que o pseudo-elemento esteja abaixo de todo o conteúdo */
+        opacity: 0.6;
+    }
+}
+
+& .monthly:hover{
+    z-index: 2;
+    & .card{
+        background-color: var(--shape-hover);
+        transform: translateY(-5%);
+          
+    }
+
+    & img[src*="star"]{
+        transform: rotate(30deg);
+        transition: transform 0.7s ease;
+    }
+
+    & img:nth-child(1){
+        transform: rotate(-30deg);
+        transition: transform 0.7s ease;
+    }
+
+    .btn::before {
+        width: 200%;
+        height: 400%;
+        opacity: 1;
+    }
+}
+
+& .semi-annual:hover{
+    & .card{
+        background-color: var(--shape-hover);
+        transform: translateY(-5%);   
+    }
+
+    & img[src*="bunny"]{
+        transform: translateY(-43%);
+        transition: transform 0.7s ease;
+    }
+
+    .btn::before {
+        width: 200%;
+        height: 400%;
+        opacity: 1;
+    }
+}
+
+& .annual:hover{
+    z-index: 2;
+    & .card{
+        background-color: var(--shape-hover);
+        transform: translateY(-5%);  
+    }
+
+    & img[src*="star"]{
+        transform: rotate(30deg);
+        transition: transform 0.7s ease;
+    }
+
+    & img:nth-child(1){
+        transform: rotate(-30deg);
+        transition: transform 0.7s ease;
+    }
+
+    .btn::before {
+        width: 200%;
+        height: 400%;
+        opacity: 1;
+    }
+}
